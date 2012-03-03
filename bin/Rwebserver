@@ -1,3 +1,9 @@
 require 'Rwebserver'
 
-Rwebserver.start
+port = ARGV[0].to_i
+
+if port > 0 and port <= 65535
+  Rwebserver.start(port)
+else
+  Rwebserver.start
+end

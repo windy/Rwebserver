@@ -6,9 +6,9 @@ require 'webrick'
 require 'logger'
 
 module Rwebserver
-  def self.start(port=8888,logger = Logger.new(STDOUT))
+  def self.start(port=8000,logger = Logger.new(STDOUT))
     current_dir = Dir.pwd
-    server = WEBrick::HTTPServer.new :Port => 8000, :DocumentRoot => current_dir
+    server = WEBrick::HTTPServer.new :Port => port, :DocumentRoot => current_dir
     logger.info("start serve for dir: #{current_dir}")
     trap 'INT' do
       logger.info("stop serve")
