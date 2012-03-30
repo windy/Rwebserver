@@ -4,7 +4,7 @@ end
 require "Rwebserver/version"
 require 'webrick'
 require 'logger'
-
+BasicSocket.do_not_reverse_lookup=true
 module Rwebserver
   def self.start(port=8000,logger = Logger.new(STDOUT))
     current_dir = Dir.pwd
