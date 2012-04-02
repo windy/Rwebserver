@@ -10,7 +10,11 @@ It is all.
 * How to use ?
 
   `gem install Rwebserver`
+  
+  
   `cd /some/path/to/server`
+  
+  
   `Rwebserver`
 
   or 
