@@ -3,6 +3,10 @@ if $0 == __FILE__
 end
 require "Rwebserver/version"
 require 'webrick'
+if RUBY_VERSION =~ /1.9/
+  require "Rwebserver/filehandler_ext"
+  require "Rwebserver/httputils_ext"
+end
 require 'logger'
 BasicSocket.do_not_reverse_lookup=true
 module Rwebserver
@@ -10,6 +14,7 @@ module Rwebserver
     current_dir = Dir.pwd
     server = WEBrick::HTTPServer.new :Port => port, :DocumentRoot => current_dir
     logger.info("start serve for dir: #{current_dir}")
+    logger.info("url: http://127.0.0.1:#{port}")
     trap 'INT' do
       logger.info("stop serve")
       server.shutdown
