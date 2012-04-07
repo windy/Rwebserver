@@ -1,13 +1,16 @@
-* What is it ?
+
+##What is Rwebserver ?
   
   Rwebserver is a simple http server. It is so simple that you just input `Rwebserver` in your shell to start serving your current directory.
 
-* Why create it ?
+##Why create Rwebserver ?
 
   I want a simple http server, just input a command. 
 It is all.
 
-* How to use ?
+
+
+###How to use ?
 
   `gem install Rwebserver`
   
@@ -22,5 +25,7 @@ It is all.
   
   
   `Rwebserver [port]`
+  
+---------------------
 
 *Have fun!*
